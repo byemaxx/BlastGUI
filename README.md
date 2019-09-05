@@ -1,7 +1,6 @@
 # BlastGUI V1.0
 
 BlastGUI is A Python-Based Cross-Platform Local BLAST Visualization Software
-![avatar](/Users/byeamx/Documents/Blast可视化文章/main.png)
 
 ## What does BlastGUI do?
 Users can build databases and perform sequence filtering and sequence alignment through a graphical user interface. 
