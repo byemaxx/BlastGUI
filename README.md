@@ -1,4 +1,4 @@
-# BlastGUI V1.0
+# BlastGUI
 
 BlastGUI is A Python-Based Cross-Platform Local BLAST Visualization Software
 ![BlastGUI main interface](BlastGUI/main.png)
