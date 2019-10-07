@@ -26,7 +26,7 @@ When you use it for the first time, build the database first with [Build databas
 - 4.Click Build database button to start database building             
 + 5.After the database construction is completed, please restart this program to refresh the database list
 
-###R un BLAST
+### Run BLAST
 ![BlastGUI main interface](picture/mainface.png)
 + 1.Please click the [Build database] button to set up the database for the first time     
 - 2.Input the sequence to be aligned into the text box or select the sequence file through the [Select file] button
