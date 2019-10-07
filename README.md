@@ -18,11 +18,11 @@ First add BLAST+ to the system environment, then
 ## How to use BlastGUI
 When you use it for the first time, build the database first with [Build database] button.
 ![Build database interface](picture/mkdbface.png)
-+ 1. Click select file button to select FASTA file 
-- 2. Select database type 
-+ 3. Enter the name of the database (no Spaces)            
-- 4. Click Build database button to start database building             
-+ 5.After the database construction is completed, please restart this program to refresh the database list
++ Click select file button to select FASTA file 
+- Select database type 
++ Enter the name of the database (no Spaces)            
+- Click Build database button to start database building             
++ After the database construction is completed, please restart this program to refresh the database list
 
 ## Results Files: BlastGUI Directory
 1. **tmp.txt** is the filtered sequence text.
