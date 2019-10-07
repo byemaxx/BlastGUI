@@ -18,17 +18,17 @@ First add BLAST+ to the system environment, then
 ## How to use BlastGUI
 When you use it for the first time, build the database first with [Build database] button.
 
-###Build database
+### Build database
 ![Build database interface](picture/mkdbface.png)
-+ Click select file button to select FASTA file 
-- Select database type 
-+ Enter the name of the database (no Spaces)            
-- Click Build database button to start database building             
-+ After the database construction is completed, please restart this program to refresh the database list
++ 1.Click select file button to select FASTA file 
+- 2.Select database type 
++ 3.Enter the name of the database (no Spaces)            
+- 4.Click Build database button to start database building             
++ 5.After the database construction is completed, please restart this program to refresh the database list
 
-###Run BLAST
+###R un BLAST
 ![BlastGUI main interface](picture/mainface.png)
-+ 1. Please click the [Build database] button to set up the database for the first time     
++ 1.Please click the [Build database] button to set up the database for the first time     
 - 2.Input the sequence to be aligned into the text box or select the sequence file through the [Select file] button
 + 3.Select the database to be compared and the comparison method.
 - 4.Set the e-value Value, output format and number of threads.The default e-value =1e-5, and the default output format is 0 and the default of threads is 4     
