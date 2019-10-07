@@ -35,7 +35,7 @@ def make_db():
         p.wait()
         out = p.stdout.readlines()
         if p.returncode == 0:
-            showinfo(title="info", message="Database created successfully!")
+            showinfo(title="info", message="Database builded successfully!")
             makedb_state.delete(0.0, END)
             for line in out:
                 makedb_state.insert("insert", line)
@@ -50,11 +50,11 @@ def make_db():
     def mkdb_instruction():
         makedb_state.insert('1.0', "1. Click select file button to select FASTA file \n\n2. Select database type \n\
             \n3. Enter the name of the database (no Spaces)\n\
-            \n4. Click create database button to start database building \n\
+            \n4. Click Build database button to start database building \n\
             \n5.After the database construction is completed, please restart this program to refresh the database list")
 
     dbwindow = Tk()
-    dbwindow.title('Create database')
+    dbwindow.title('Build database')
     dbwindow.geometry('600x400')
 
     mkdb_typeList = ['Nucleic acid sequence', 'Protein sequence', ]
@@ -67,7 +67,7 @@ def make_db():
     mkdb_instruction()
 
     style.configure('Tmake_db_button.TButton', font=('', 13))
-    make_db_button = Button(dbwindow, text='Create database', command=make_db_button_cmd, style='Tmake_db_button.TButton')
+    make_db_button = Button(dbwindow, text='Build database', command=make_db_button_cmd, style='Tmake_db_button.TButton')
     make_db_button.place(relx=0.705, rely=0.216, relwidth=0.251, relheight=0.219)
 
     db_name_inputVar = StringVar(value='db')
@@ -128,7 +128,8 @@ def star():
         fa = 'tmp.txt'
 
     b = subprocess.Popen(blast_type.get() + " -out result.txt -query " + fa + " -outfmt " + outfmt_input.get() +
-                         " -evalue " + evalue.get() + " -db " + db_type.get() + ' -num_threads ' + threat_input.get(),
+                         " -evalue " + evalue.get() + " -db " + db_type.get() + ' -num_threads ' + threat_input.get() + 
+                         ' ' + othercmd_input.get(),
                          shell=True, stdout=subprocess.PIPE)
     b.wait()
 
@@ -170,10 +171,10 @@ def about_cmd():
 
 
 def main_instructions():
-    result_output.insert('1.0', 'Instructions:\n\n1.1. Please click the [Create database] button to set up the database for the first time\n \
+    result_output.insert('1.0', 'Instructions:\n\n1. Please click the [Build database] button to set up the database for the first time\n \
     \n2.Input the sequence to be aligned into the text box or select the sequence file through the [Select file] button \
      \n\n3.Select the database to be compared and the comparison method.\n\n4.Set the e-value Value, output format and number of threads.The default e-value =1e-5, and the default output format is 0 and the default of threads is 4\n \
-     \n5.Click [Start] button for comparison, and the comparison results will be displayed here and saved in result.txt\n\n6.Alignment time depends on sequence size and computer performance \
+     \n5.(Optional) Any other command of BLAST like: -max_target_seqs 20 \n\n6.Click [Start] button for comparison, and the comparison results will be displayed here and saved in result.txt\n\n7.Alignment time depends on sequence size and computer performance \
      \n')
 
 
@@ -183,7 +184,7 @@ def mkdb_window_cmd():
 
 top = Tk()
 top.title('BlastGUI')
-top.geometry('900x600')
+top.geometry('960x640')
 
 style = Style()
 fnfa = ''
@@ -231,14 +232,14 @@ style.configure('Tabout.TButton', font=('', 13))
 about = Button(top, text='About', textvariable=aboutVar, command=about_cmd, style='Tabout.TButton')
 about.place(relx=0.88, rely=0.015, relwidth=0.11, relheight=0.065)
 
-mkdb_windowVar = StringVar(value=' Create\ndatabase')
+mkdb_windowVar = StringVar(value=' Build\ndatabase')
 style.configure('Tmkdb_window.TButton', font=('', 13))
-mkdb_window = Button(top, text='Create database', textvariable=mkdb_windowVar, command=mkdb_window_cmd, style='Tmkdb_window.TButton')
+mkdb_window = Button(top, text='Build database', textvariable=mkdb_windowVar, command=mkdb_window_cmd, style='Tmkdb_window.TButton')
 mkdb_window.place(relx=0.88, rely=0.091, relwidth=0.11, relheight=0.065)
 
-evalue_labelVar = StringVar(value='E-vale：')
+evalue_labelVar = StringVar(value='E-value：')
 style.configure('Tevalue_label.TLabel', anchor='w', font=('', 12))
-evalue_label = Label(top, text='E-vale', textvariable=evalue_labelVar, style='Tevalue_label.TLabel')
+evalue_label = Label(top, text='E-value', textvariable=evalue_labelVar, style='Tevalue_label.TLabel')
 evalue_label.place(relx=0.02, rely=0.166, relwidth=0.09, relheight=0.032)
 
 blast_select_labelVar = StringVar(value='Methods：')
@@ -268,5 +269,14 @@ threat_label.place(relx=0.494, rely=0.106, relwidth=0.08, relheight=0.032)
 threat_inputVar = StringVar(value='4')
 threat_input = Entry(top, textvariable=threat_inputVar, font=('', 12))
 threat_input.place(relx=0.593, rely=0.106, relwidth=0.08, relheight=0.034)
+
+othercmd_labelVar = StringVar(value='Other cmd:')
+style.configure('Tothercmd_label.TLabel', anchor='w', font=('', 12))
+othercmd_label = Label(top, text='other cmd', textvariable=othercmd_labelVar, style='Tothercmd_label.TLabel')
+othercmd_label.place(relx=0.494, rely=0.166, relwidth=0.08, relheight=0.032)
+
+othercmd_inputVar = StringVar(value=' ')
+othercmd_input = Entry(top, textvariable=othercmd_inputVar, font=('', 12))
+othercmd_input.place(relx=0.593, rely=0.166, relwidth=0.19, relheight=0.034)
 
 top.mainloop()
