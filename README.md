@@ -12,7 +12,7 @@ Run BlastGUI on windows:
 Put blastGUI.exe and BLAST+ in the same directory or add BLAST+ to the system environment, then run blastGUI.exe
 
 Run BlastGUI on macOS or Linux：
-First add BLAST+ to the system environment, then
+First add BLAST+ to the system environment, then 
 `python3 blastGUI.py`
 
 ## Results Files: BlastGUI Directory
