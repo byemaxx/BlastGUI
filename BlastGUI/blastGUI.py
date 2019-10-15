@@ -35,7 +35,7 @@ def make_db():
         p.wait()
         out = p.stdout.readlines()
         if p.returncode == 0:
-            showinfo(title="info", message="Database builded successfully!")
+            showinfo(title="info", message="Database built successfully!")
             makedb_state.delete(0.0, END)
             for line in out:
                 makedb_state.insert("insert", line)
