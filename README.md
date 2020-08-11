@@ -9,7 +9,7 @@ The operation visualization, automatic sequence filtering, and cross-platform us
 
 For more details see the BlastGUI papers below.
 
-[Du Z , Wu Q , Wang T , et al. BlastGUI：A Python‐Based Cross‐Platform Local BLAST Visualization Software[J]. Molecular Informatics, 2019.](https://onlinelibrary.wiley.com/doi/abs/10.1002/minf.201900120)
+[Du, Z., Wu, Q., Wang, T., Chen, D., Huang, X., Yang, W., & Luo, W. (2020). BlastGUI: A Python‐based Cross‐platform Local BLAST Visualization Software. Molecular Informatics, 39(4), 1900120.](https://pubmed.ncbi.nlm.nih.gov/31650686/)
 
 ## Running BlastGUI
 Run BlastGUI on windows:
@@ -42,3 +42,6 @@ When you use it for the first time, build the database first with [Build databas
 ## Results Files: BlastGUI Directory
 1. **tmp.txt** is the filtered sequence text.
 2. **result.txt** is the alignment result for the user to do futher analysis.
+
+## Download BlastGUI
+Please download this software from [releases page](https://github.com/byemaxx/BlastGUI/releases).
