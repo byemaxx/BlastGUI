@@ -7,7 +7,7 @@ BlastGUI is A Python-Based Cross-Platform Local BLAST Visualization Software
 Users can build databases and perform sequence filtering and sequence alignment through a graphical user interface. 
 The operation visualization, automatic sequence filtering, and cross-platform use can significantly facilitate the analysis of biological data and the mining of biological information. 
 
-For more details see the BlastGUI papers below.
+For more details see the BlastGUI paper below.
 
 [Du, Z., Wu, Q., Wang, T., Chen, D., Huang, X., Yang, W., & Luo, W. (2020). BlastGUI: A Python‐based Cross‐platform Local BLAST Visualization Software. Molecular Informatics, 39(4), 1900120.](https://pubmed.ncbi.nlm.nih.gov/31650686/)
 
