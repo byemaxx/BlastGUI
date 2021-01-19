@@ -14,7 +14,8 @@ For more details see the BlastGUI paper below.
 ## Running BlastGUI
 Run BlastGUI on windows:
 Put blastGUI.exe and BLAST+ in the same directory or add BLAST+ to the system environment, then run blastGUI.exe
-[Download Blast+](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+
+[Download the latest Blast+]<ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/>
 
 Run BlastGUI on macOS or Linux：
 First add BLAST+ to the system environment, then 
