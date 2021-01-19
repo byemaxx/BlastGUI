@@ -12,10 +12,10 @@ For more details see the BlastGUI paper below.
 [Du, Z., Wu, Q., Wang, T., Chen, D., Huang, X., Yang, W., & Luo, W. (2020). BlastGUI: A Python‐based Cross‐platform Local BLAST Visualization Software. Molecular Informatics, 39(4), 1900120.](https://pubmed.ncbi.nlm.nih.gov/31650686/)
 
 ## Running BlastGUI
+Download the latest Blast+: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+
 Run BlastGUI on windows:
 Put blastGUI.exe and BLAST+ in the same directory or add BLAST+ to the system environment, then run blastGUI.exe
-
-[Download the latest Blast+](ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 
 Run BlastGUI on macOS or Linux：
 First add BLAST+ to the system environment, then 
