@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Author：Wu Qing
-# E-mail: cipn@qq.com
 
 import os
 import re
